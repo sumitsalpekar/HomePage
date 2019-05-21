@@ -445,10 +445,10 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="packages.config" />
-    <Content Include="Views\Partners\PartnersHeading.cshtml" />
-    <Content Include="Views\Partners\PartnersContent.cshtml" />
-    <Content Include="Views\Partners\StrategicPartnersLink.cshtml" />
-    <Content Include="Views\Partners\EmergingPartnersLinks.cshtml" />
+    <Content Include="Views\Features\Partners\PartnersHeading.cshtml" />
+    <Content Include="Views\Features\Partners\PartnersContent.cshtml" />
+    <Content Include="Views\Features\Partners\StrategicPartnersLink.cshtml" />
+    <Content Include="Views\Features\Partners\EmergingPartnersLinks.cshtml" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
   </ItemGroup>
   <ItemGroup>
