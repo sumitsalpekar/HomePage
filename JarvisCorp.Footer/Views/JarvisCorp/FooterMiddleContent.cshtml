@@ -1,0 +1,44 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Sitecore.Data.Fields.MultilistField footerlinksfield = Model.Item.Fields["Social Media Icons Footer"];
+    var otheritems = footerlinksfield.GetItems();
+
+} 
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <ul class="hidden-sm-down pull-left">
+                        <li>
+                            <a href="/">
+                               @Html.Sitecore().Field("Logo")
+                            </a>
+                        </li>
+                        <!-- BEGIN FOOTER NAVIGATION -->
+
+                        <li>
+                            @Html.Sitecore().Field("Link")
+                        </li>
+
+                        <!-- END FOOTER NAVIGATION -->
+                        <li>
+                            @Html.Sitecore().Field("Copyright Content")
+                        </li>
+                    </ul>
+                    <!-- Begin Footer Icons-->
+
+                    <ul class="list-unstyled">
+                        <li>
+                            @foreach (var otheritem in otheritems)
+                            {
+                                @Html.Sitecore().Field("Icon", otheritem)
+                            }                            
+                        </li>
+                    </ul>
+                    <!-- End Footer Icons-->
+                </div>
+            </div>
+        </div>
+
+

@@ -1,0 +1,31 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+
+<section class="contact-form ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                @Html.Sitecore().Placeholder("form")
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map" style="background-image:url(./images/map-background.jpg)">
+   @Html.Sitecore().Placeholder("LocationsKey")
+</section>
+
+<section class="footer-icons">
+    @Html.Sitecore().Placeholder("FooterMiddleContentKey")
+</section>
+
+<div class="blankDiv" style="display: block;height: 50px;background-color: transparent;">
+    <p></p>
+</div>
+<footer>
+    @Html.Sitecore().Placeholder("FooterBottomContentKey")
+</footer>

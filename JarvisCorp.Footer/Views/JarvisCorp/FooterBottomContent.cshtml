@@ -1,0 +1,52 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Sitecore.Data.Fields.MultilistField footerButtonLinks = Model.Item.Fields["Button"];
+    var linkItems = footerButtonLinks.GetItems();
+} 
+
+<div class="desktop-footer">
+    <div class="footer-slogan">
+       @Html.Sitecore().Field("Tagline")
+    </div>
+    <div class="footer-links hidden-md-up">
+        <ul>
+            <!-- BEGIN FOOTER NAVIGATION MOBILE -->
+
+            <li>
+                @Html.Sitecore().Field("Link")
+            </li>
+
+            <!-- END FOOTER NAVIGATION MOBILE -->
+        </ul>
+        <p>@Html.Sitecore().Field("Copyright Content")</p>
+    </div>
+    <div class="footer-share">
+        @foreach (var linkItem in linkItems)
+        {
+            <button class="dropdown-toggle" id="sharethis" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @Html.Sitecore().Field("Link Name", linkItem)
+            </button>
+        }
+
+        <!-- BEGIN SOCIAL MEDIA LINKS -->
+        <!-- AddToAny BEGIN -->
+        <div class="dropdown-menu sharelinks a2a_kit" aria-labelledby="sharethis" style="line-height: 16px;">
+            <ul class="list-unstyled">
+                <li>
+                    <a class="a2a_button_twitter" target="_blank" href="/#twitter" rel="nofollow noopener"><i class="fa fa-twitter"></i>Twitter</a>
+                </li>
+                <li>
+                    <a class="a2a_button_facebook" target="_blank" href="/#facebook" rel="nofollow noopener"><i class="fa fa-facebook-square"></i>Facebook</a>
+                </li>
+                <li>
+                    <a class="a2a_button_linkedin" target="_blank" href="/#linkedin" rel="nofollow noopener"><i class="fa fa-linkedin-square"></i>LinkedIn</a>
+                </li>
+                <li>
+                    <a class="a2a_button_email" target="_blank" href="/#email" rel="nofollow noopener"><i class="fa fa-envelope-o"></i>Email</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

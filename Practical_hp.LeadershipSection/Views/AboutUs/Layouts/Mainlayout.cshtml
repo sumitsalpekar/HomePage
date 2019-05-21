@@ -1,0 +1,32 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+    @*<link href="~/Css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Css/perficient-main.css">
+    <link rel="stylesheet" href="~/Css/perficient-override.css">*@
+    <!-- endinject -->
+    @*<link rel="stylesheet" href="~/Css/font-awesome.css">
+    <link href="~/Css/css_002.css" rel="stylesheet" type="text/css">
+    <link href="~/Css/css.css" rel="stylesheet" type="text/css">*@
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>
+    <div>
+        @Html.Sitecore().Placeholder("header")
+    </div>
+    <section class="profile-overlay">
+        @Html.Sitecore().Placeholder("main")
+    </section>
+    <div>
+        @Html.Sitecore().Placeholder("footer")
+    </div>
+</body>
+</html>

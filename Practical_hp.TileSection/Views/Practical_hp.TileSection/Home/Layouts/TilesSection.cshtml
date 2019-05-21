@@ -1,0 +1,29 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+    <link rel="stylesheet" href="~/Css/base.css" />
+    <link rel="stylesheet" href="~/Css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed" />
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body>
+    <div>
+        @Html.Sitecore().Placeholder("header")
+    </div>
+    <div>
+        @Html.Sitecore().Placeholder("main")
+    </div>
+    <div>
+        @Html.Sitecore().Placeholder("footer")
+    </div>
+</body>
+</html>

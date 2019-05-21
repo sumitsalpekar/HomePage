@@ -1,0 +1,108 @@
+﻿@{
+    Sitecore.Data.Fields.MultilistField footerlinksfield = Model.Item.Fields["Source"];
+    var otheritems = footerlinksfield.GetItems();
+}
+
+<section class="hero hero-tabs">
+        <div class="container hero-tabs-container">
+            <div class="row hero-content-block">
+                <div class="col-lg-8 container-wrap">
+                    <div class="row">
+                        <div class="col-md-12 header-wrap">
+                            <div class="text-circle">
+                                <div class="circle-content">
+								
+@Html.Sitecore().Field("Title")                            </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="col-md-4 tabs-container">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">@{
+								int j = 1;
+										foreach(var otheritem in otheritems ){
+var Class = "";
+      switch (j)
+            {
+                case 1:
+				Class = "nav-link active";
+                break;
+				
+				default:
+                    Class = "nav-link ";
+                    break;
+				
+			}
+			j++;
+                                            <li class="nav-item">
+											
+                                                <a class="@Class" data-toggle="tab" href="#@Html.Sitecore().Field("TabLink", otheritem)" role="tab">@Html.Sitecore().Field("TabTitle", otheritem)</a>
+                                            </li>
+											}
+											}
+                                            
+                                </ul>
+                            </div>
+                            <div class="col-md-8 content-container">
+                                <!-- Tab panes -->			@{
+		
+
+		
+				int i = 1;	
+			foreach(var otheritem in otheritems )
+			{
+															 
+			 
+		
+					var Class = "";
+      switch (i)
+            {
+                case 1:
+				Class = "tab-pane fade in active";
+                break;
+				
+				default:
+                    Class = "tab-pane fade ";
+                    break;
+				
+			}
+			i++;
+															 
+														 
+                                <div class="tab-content" >
+
+                                            <div class="@Class" role="tabpanel" id="@Html.Sitecore().Field("TabLink", otheritem)" >
+											 
+@Html.Sitecore().Field("Image", otheritem,new {@class = "hero-bg"})
+
+
+
+                                              
+<a href="https://www.perficient.com/work/hunter-douglas" class="btn-float">@Html.Sitecore().Field("Bottom Link",otheritem)</a>
+
+                                                                                                   <div class="pane-content">
+                                                        <p>@Html.Sitecore().Field("Description",otheritem)
+														
+														</p>
+														
+                                                    </div>
+													
+                                            </div>
+                                            
+                                           
+                                </div>
+								
+								}
+								
+								
+								}
+                            </div>
+                        </div>
+                        <!-- row -->
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
