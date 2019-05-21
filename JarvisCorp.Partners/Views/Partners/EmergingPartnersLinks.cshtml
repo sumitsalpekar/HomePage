@@ -1,0 +1,19 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+
+<div class="col-xs-12 column-block">
+    <ul>
+        @foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
+        {
+            <li>
+                <a href="@Sitecore.Links.LinkManager.GetItemUrl(item)" target="_blank">
+                    @Html.Sitecore().Field("Navigation Title", item)
+                </a>
+            </li>
+        }
+    </ul>
+</div>
