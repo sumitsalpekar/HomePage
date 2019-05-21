@@ -472,7 +472,7 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\JarvisCorp\Layouts\" />
+    <Folder Include="Views\Features\Tabs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

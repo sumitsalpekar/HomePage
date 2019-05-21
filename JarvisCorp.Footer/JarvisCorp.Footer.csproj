@@ -103,12 +103,11 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Web.config" />
-    <Content Include="Views\JarvisCorp\Footer.cshtml" />
-    <Content Include="Views\JarvisCorp\FooterBottomContent.cshtml" />
-    <Content Include="Views\JarvisCorp\FooterMiddleContent.cshtml" />
-    <Content Include="Views\JarvisCorp\Form.cshtml" />
-    <Content Include="Views\JarvisCorp\Layouts\Default.cshtml" />
-    <Content Include="Views\JarvisCorp\Locations.cshtml" />
+    <Content Include="Views\Foundation\Footer\Footer.cshtml" />
+    <Content Include="Views\Foundation\Footer\FooterBottomContent.cshtml" />
+    <Content Include="Views\Foundation\Footer\FooterMiddleContent.cshtml" />
+    <Content Include="Views\Foundation\Footer\Form.cshtml" />
+    <Content Include="Views\Foundation\Footer\Locations.cshtml" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

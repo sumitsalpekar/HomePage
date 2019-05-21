@@ -2,10 +2,16 @@
   <PropertyGroup>
     <Site Server="http://practical_hp.local" UserName="sitecore\admin" IsRemoteSitecore="False" />
   </PropertyGroup>
-  <File Include="Views\AboutUs\Layouts\Mainlayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+  <File Include="Views\Layouts\Mainlayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{9C0B6642-6469-4978-A34C-369FA3783E2A}</Item>
   </File>
   <File Include="/Views/AboutUs/Layouts/Mainlayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
     <Item DatabaseName="master">{9C0B6642-6469-4978-A34C-369FA3783E2A}</Item>
+  </File>
+  <File Include="Views\Features\Leadership\OneColumnLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{5E00F298-6773-41D2-8257-0C34DDC396FE}</Item>
+  </File>
+  <File Include="Views\AboutUs\OneColumnLayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{74658ECD-1874-40A8-B8E6-079EABB685FA}</Item>
   </File>
 </Project>

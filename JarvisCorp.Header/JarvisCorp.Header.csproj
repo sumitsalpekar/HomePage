@@ -445,12 +445,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Views\Header\header-BKP.cshtml" />
-    <Content Include="Views\Header\header.cshtml" />
-    <Content Include="Views\Header\headerMainMenu.cshtml" />
-    <Content Include="Views\Header\headerRightSideMenu.cshtml" />
-    <Content Include="Views\Layout\Default.cshtml" />
-    <Content Include="Views\partnerPage\enterprisePartnersComponent.cshtml" />
+    <Content Include="Views\Foundation\Header\header-BKP.cshtml" />
+    <Content Include="Views\Foundation\Header\header.cshtml" />
+    <Content Include="Views\Foundation\Header\headerMainMenu.cshtml" />
+    <Content Include="Views\Foundation\Header\headerRightSideMenu.cshtml" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

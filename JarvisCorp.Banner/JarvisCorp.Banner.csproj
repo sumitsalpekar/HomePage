@@ -445,12 +445,11 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Web.config" />
-    <Content Include="Views\JarvisCorp\BannerContent.cshtml" />
-    <Content Include="Views\JarvisCorp\CareersPageBanner.cshtml" />
-    <Content Include="Views\JarvisCorp\CompanyBusinessBanner.cshtml" />
-    <Content Include="Views\JarvisCorp\CompanyDetailsBanner.cshtml" />
-    <Content Include="Views\JarvisCorp\HomePage.cshtml" />
-    <Content Include="Views\JarvisCorp\Layouts\Default.cshtml" />
+    <Content Include="Views\Features\Banners\BannerContent.cshtml" />
+    <Content Include="Views\Features\Banners\CareersPageBanner.cshtml" />
+    <Content Include="Views\Features\Banners\CompanyBusinessBanner.cshtml" />
+    <Content Include="Views\Features\Banners\CompanyDetailsBanner.cshtml" />
+    <Content Include="Views\Features\Banners\HomePage.cshtml" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

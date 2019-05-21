@@ -441,32 +441,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Css\css.css" />
-    <Content Include="Css\css_002.css" />
-    <Content Include="Css\font-awesome.css" />
-    <Content Include="Css\perficient-main.css" />
-    <Content Include="Css\perficient-override.css" />
-    <Content Include="Images\Leadership section Images\billdavis.jfif" />
-    <Content Include="Images\Leadership section Images\edhoffman.jfif" />
-    <Content Include="Images\Leadership section Images\harim.jfif" />
-    <Content Include="Images\Leadership section Images\jeffdavis.jfif" />
-    <Content Include="Images\Leadership section Images\johnjenkins.jfif" />
-    <Content Include="Images\Leadership section Images\kevinscheen.jfif" />
-    <Content Include="Images\Leadership section Images\mattcastle.png" />
-    <Content Include="Images\Leadership section Images\mattmcgillen.jfif" />
-    <Content Include="Images\Leadership section Images\michael-zucker.jfif" />
-    <Content Include="Images\Leadership section Images\pam-cannon.png" />
-    <Content Include="Images\Leadership section Images\patrick-schweirking.jfif" />
-    <Content Include="Images\Leadership section Images\paulmartin.jfif" />
-    <Content Include="Images\Leadership section Images\santoshnair.jfif" />
-    <Content Include="Images\Leadership section Images\susan-adomite.png" />
-    <Content Include="Images\Leadership section Images\tomhogan.jfif" />
-    <Content Include="Views\AboutUs\LeadershipContainer.cshtml" />
+    <Content Include="Views\Features\Leadership\LeadershipContainer.cshtml" />
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Web.config" />
-    <Content Include="Views\AboutUs\Layouts\Mainlayout.cshtml" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
+    <Content Include="Views\Features\Leadership\OneColumnLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

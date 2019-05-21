@@ -454,8 +454,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Css\bootstrap.css" />
-    <Content Include="Css\perficient-main.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\2015_logo_horiz_notag_png.png" />
     <Content Include="Images\2018-siebelctms-guide-card.png" />
@@ -479,13 +477,11 @@
     <Content Include="Images\perficient-logo-grey.png" />
     <Content Include="Images\ss_cat_card.jpg" />
     <Content Include="Images\trendsautomotive_circle.png" />
-    <Content Include="Scripts\perficient.js" />
     <Content Include="Views\web.config" />
     <Content Include="App_Config\Include\zzz.Sitecore.DependencyInjection.config" />
     <None Include="packages.config" />
     <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
-    <Content Include="Views\Layouts\MainLayout.cshtml" />
     <Content Include="Views\Features\Guide\GuideContent.cshtml" />
     <Content Include="Views\Features\Guide\MiddleGuideContent.cshtml" />
     <Content Include="Views\Features\Guide\RightGuideContent.cshtml" />
