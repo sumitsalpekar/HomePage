@@ -9,49 +9,50 @@
     string navUrl = Sitecore.Links.LinkManager.GetItemUrl(Model.Item);
     Sitecore.Data.Fields.LinkField linkFieldVal = Model.Item.Fields["Navigation Links"];
 }
-
-<div class="parent-div">
-    @if (Model.Item.Fields["Navigation Title"].Value != null && Model.Item.Fields["Navigation Title"].Value != string.Empty)
-    {
-        <div class="header-container">
-            <div class="row">
-                <div class="header-content">
-                    <h2 class="section-heading">@Html.Sitecore().Field("Navigation Title")</h2>
-                    <a href="@navUrl" class="heading-link">@linkFieldVal.Text</a>
-                </div>
-            </div>
-        </div>
-    }
-    <div class="row">
-        @foreach (Sitecore.Data.Items.Item card in cards)
+<div class="main-container">
+    <div class="parent-div">
+        @if (Model.Item.Fields["Navigation Title"].Value != null && Model.Item.Fields["Navigation Title"].Value != string.Empty)
         {
-            string url = Sitecore.Links.LinkManager.GetItemUrl(card);
-            Sitecore.Data.Fields.ImageField imageRef = card.Fields["Image"];
-            string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
-            string imgAltText = card.Fields["Images Alt"].Value;
-            Sitecore.Data.Fields.Field date = card.Fields["Date"];
-
-            <div class="col-sm-3">
-                <div class="tile-card">
-                    <a href="@url" class="tile-card-link">
-                        <div class="card-container">
-                            <div class="image">
-                                <img src="@imgSrc" class="tileimg" alt="@imgAltText" />
-                            </div>
-                            <div class="heading">@Html.Sitecore().Field("Content Heading", card)</div>
-                        </div>
-                        <div class="intro-container">
-                            <div class="content">
-                                @Html.Sitecore().Field("Content Intro", card)
-                                @if (date.HasValue && date.Value != string.Empty && date.Value != null)
-                                {
-                                    <p class="dateclass">@Html.Sitecore().Field("Date",card, new { format = "MMM dd, yyyy" })</p>
-                                }
-                            </div>                            
-                        </div>
-                    </a>
+            <div class="header-container">
+                <div class="row">
+                    <div class="header-content">
+                        <h2 class="section-heading">@Html.Sitecore().Field("Navigation Title")</h2>
+                        <a href="@navUrl" class="heading-link">@linkFieldVal.Text</a>
+                    </div>
                 </div>
             </div>
         }
+        <div class="row">
+            @foreach (Sitecore.Data.Items.Item card in cards)
+            {
+                string url = Sitecore.Links.LinkManager.GetItemUrl(card);
+                Sitecore.Data.Fields.ImageField imageRef = card.Fields["Image"];
+                string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
+                string imgAltText = card.Fields["Images Alt"].Value;
+                Sitecore.Data.Fields.Field date = card.Fields["Date"];
+
+                <div class="col-sm-3">
+                    <div class="tile-card">
+                        <a href="@url" class="tile-card-link">
+                            <div class="card-container">
+                                <div class="image">
+                                    <img src="@imgSrc" class="tileimg" alt="@imgAltText" />
+                                </div>
+                                <div class="heading">@Html.Sitecore().Field("Content Heading", card)</div>
+                            </div>
+                            <div class="intro-container">
+                                <div class="content">
+                                    @Html.Sitecore().Field("Content Intro", card)
+                                    @if (date.HasValue && date.Value != string.Empty && date.Value != null)
+                                    {
+                                        <p class="dateclass">@Html.Sitecore().Field("Date", card, new { format = "MMM dd, yyyy" })</p>
+                                    }
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
 </div>
