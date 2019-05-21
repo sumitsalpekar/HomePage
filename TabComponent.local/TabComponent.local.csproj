@@ -478,9 +478,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

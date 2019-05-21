@@ -445,11 +445,11 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Views\Partners\PartnersHeading.cshtml" />
     <Content Include="Views\Partners\PartnersContent.cshtml" />
     <Content Include="Views\Partners\StrategicPartnersLink.cshtml" />
     <Content Include="Views\Partners\EmergingPartnersLinks.cshtml" />
+    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

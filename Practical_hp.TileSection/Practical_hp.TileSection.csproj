@@ -492,10 +492,10 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Web.config" />
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Views\Practical_hp.TileSection\Home\Layouts\TilesSection.cshtml" />
     <Content Include="Views\Practical_hp.TileSection\Home\OneColumn.cshtml" />
     <Content Include="Views\Practical_hp.TileSection\Home\TilesRow.cshtml" />
+    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

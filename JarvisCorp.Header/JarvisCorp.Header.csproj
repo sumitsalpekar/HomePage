@@ -445,15 +445,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\Header\header-BKP.cshtml" />
     <Content Include="Views\Header\header.cshtml" />
     <Content Include="Views\Header\headerMainMenu.cshtml" />
     <Content Include="Views\Header\headerRightSideMenu.cshtml" />
     <Content Include="Views\Layout\Default.cshtml" />
     <Content Include="Views\partnerPage\enterprisePartnersComponent.cshtml" />
+    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

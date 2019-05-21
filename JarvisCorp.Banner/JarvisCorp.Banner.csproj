@@ -451,7 +451,7 @@
     <Content Include="Views\JarvisCorp\CompanyDetailsBanner.cshtml" />
     <Content Include="Views\JarvisCorp\HomePage.cshtml" />
     <Content Include="Views\JarvisCorp\Layouts\Default.cshtml" />
-    <None Include="Properties\PublishProfiles\JarvisProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

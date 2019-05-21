@@ -443,10 +443,10 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <Content Include="Views\Layouts\JarvisGeneralLayout.cshtml" />
     <Content Include="Views\Webinars\WebinarContent.cshtml" />
     <Content Include="Views\OneColumn.cshtml" />
+    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
