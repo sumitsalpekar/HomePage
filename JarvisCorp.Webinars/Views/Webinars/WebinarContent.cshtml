@@ -1,0 +1,70 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+
+<section class="cards-section white static expanded lower-eventpanels eventpanels" id="cards-section-webinars">
+    <div class="cards-container">
+        <div class="card-group">
+            @foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
+            {
+                <article class="card col-lg-3 col-md-4 col-sm-12">
+                    <div class="card-content">
+                        <div class="event-table">
+                            <div class="event-row">
+                                <div class="event-column event-date-heading">
+                                    <h1>May 9th</h1>
+                                    <h2>- May 9th, 2019</h2>
+                                </div>
+                                <div class="event-column event-details">
+                                    <div class="event">
+                                        <h4 class="event-title">
+                                            <a href="@Sitecore.Links.LinkManager.GetItemUrl(item)">
+                                                @Html.Sitecore().Field("Webinar Title", item)
+                                            </a>
+                                        </h4>
+                                        <h5></h5>
+                                        <h6>
+                                            @Html.Sitecore().Field("Date", item, new { format = "MMM dd, yyyy" })
+                                        </h6>
+                                    </div>
+                                </div>
+                                <div class="event-column event-host">
+                                    @{
+                                        Sitecore.Data.Fields.MultilistField refMultilistField = item.Fields["Webinar Speakers"];
+                                        Sitecore.Data.Items.Item[] speakers = refMultilistField.GetItems();
+
+                                        foreach (Sitecore.Data.Items.Item innerItem in speakers)
+                                        {
+                                            Sitecore.Data.Fields.ImageField imgField = ((Sitecore.Data.Fields.ImageField)innerItem.Fields["Image"]);
+                                            Sitecore.Data.Fields.Field imageheading = Model.Item.Fields["Images Alt"];
+                                            <div class="profile-label">
+                                                <div class="profile-row">
+                                                    <div class="content-container img-wrapper">
+                                                        @{
+                                                            if (imgField.MediaItem != null)
+                                                            {
+                                                                string imageUrl = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imgField.MediaItem);
+                                                                <img class="img-profile" src="@imageUrl" alt="@imageheading" />
+                                                            }
+                                                        }
+                                                    </div>
+                                                    <div class="content-container content-wrapper">
+                                                        <h5>@Html.Sitecore().Field("Content Heading", innerItem)</h5>
+                                                        <h6>@Html.Sitecore().Field("Content Intro", innerItem)</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+﻿@{
+    Sitecore.Data.Fields.ImageField imageRef = Model.Item.Fields["Image"];
+    string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
+
+    Sitecore.Data.Fields.ImageField mobImageRef = Model.Item.Fields["headerMobileLogo"];
+    string mobImgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(mobImageRef.MediaItem);
+}
+
+<header role="banner" class="">
+    <div class="search-icon" id="search-trigger-overlay">
+        <span></span>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hidden-md-up mobile-logo">
+                <a href="/">
+                    <img src="@mobImgSrc" alt="" width="200" height="48" style="margin: 0px 0px">
+
+                </a>
+            </div>
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#mobilenav">
+                <div class="menu-icon">
+                    <div class="center-bar"></div>
+                </div>
+            </button>
+            <nav class="navbar navbar-full">
+                <div class="collapse navbar-toggleable-sm" id="mobilenav">
+                    <div class="nav-block">
+                        <div class="main-nav">
+                            <ul>
+                                <li class="nav-item hidden-sm-down">
+                                    <!-- Possible change here -->
+                                    <a href="/" class="logo">
+
+                                        <img src="@imgSrc" alt="Perficient Logo">
+
+                                    </a>
+                                </li>
+                                <!-- BEGIN MAIN NAVIGATION -->
+                                @Html.Sitecore().Placeholder("headerMainMenu")
+                                <!-- END MAIN NAVIGATION -->
+                            </ul>
+                        </div>
+                        <!-- BEGIN UTILITY NAVIGATION -->
+                        @Html.Sitecore().Placeholder("headerRightSideMenu")
+                    </div>
+                    <!-- END UTILITY NAVIGATION -->
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>

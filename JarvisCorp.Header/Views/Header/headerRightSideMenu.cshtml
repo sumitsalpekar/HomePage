@@ -1,0 +1,15 @@
+﻿@{
+    Sitecore.Data.Fields.MultilistField otherlinksfield1 = Model.Item.Fields["rightSideMenu"];
+    var otheritems1 = otherlinksfield1.GetItems();
+}
+
+<div class="pull-right utility-nav">
+    <ul>
+        @foreach (Sitecore.Data.Items.Item item in otheritems1)
+        {
+            <li>
+                <a href="#">@Html.Sitecore().Field("Navigation Title", item)</a>
+            </li>
+        }
+    </ul>
+</div>

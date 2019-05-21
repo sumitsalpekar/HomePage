@@ -1,0 +1,13 @@
+﻿@{
+    Sitecore.Data.Fields.MultilistField otherlinksfield = Model.Item.Fields["mainMenu"];
+    var otheritems = otherlinksfield.GetItems();
+}
+
+@foreach (Sitecore.Data.Items.Item item in otheritems)
+{
+    <li class="nav-item ">
+        <a href="#" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @Html.Sitecore().Field("Navigation Title", item)
+        </a>
+    </li>
+}
