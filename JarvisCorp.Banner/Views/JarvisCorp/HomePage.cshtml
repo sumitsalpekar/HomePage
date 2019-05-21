@@ -1,0 +1,39 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+@foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
+{
+    <section class="hero hero-block purple" id="hero-main" style="">
+        <div class="hero-background-container">
+            <div class="hero-background large-loaded"
+                 src="~/images/hero-forrester-wave-api-services-lg.png"
+                 data-mobile-image="~/images/hero-forrester-wave-api-services-sm.png"
+                 data-image="~/images/hero-forrester-wave-api-services-lg.png">
+
+                @Html.Sitecore().Field("Image", item)
+
+            </div>
+            <div class="hero-caption">
+                <a href="#"></a>
+            </div>
+        </div>
+        <div class="color-container" style="background: no-repeat right bottom/85%;">
+            <i class="icon icon-blockangle" style=""></i>
+            <div class="hero-content">
+                <h1>
+                    @Html.Sitecore().Field("Content Heading", item)
+                </h1>
+                <p>
+                    @Html.Sitecore().Field("Content Intro", item)
+                </p>
+                <a href="/work/lincoln-financial-group" class="btn-hero">
+                    @Html.Sitecore().Field("ButtonText", item)
+                </a>
+            </div>
+        </div>
+    </section>
+}
+
