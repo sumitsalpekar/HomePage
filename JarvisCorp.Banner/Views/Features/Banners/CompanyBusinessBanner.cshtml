@@ -10,7 +10,11 @@
         @Html.Sitecore().Field("Image")
     </div>
     <div class="color-container left">
-        <h2 class="content-circle">@Html.Sitecore().Field("Content Intro")</h2>
+        @if (Html.Sitecore().Field("Content Intro").ToHtmlString() != null && Html.Sitecore().Field("Content Intro").ToHtmlString() != String.Empty)
+        {
+            <h2 class="content-circle">@Html.Sitecore().Field("Content Intro")</h2>
+        }
+
         <i class="icon icon-blockangle"></i>
         <div class="hero-content">
             <h1>@Html.Sitecore().Field("Content Heading")</h1>
