@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practical_hp.LeadershipSect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practical_hp.TileSection", "..\Practical_hp.TileSection\Practical_hp.TileSection\Practical_hp.TileSection\Practical_hp.TileSection.csproj", "{6A3CD2FE-2597-477F-921B-98F2ED47B108}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarvisCorp.Partners", "..\Practical_Hp\JarvisCorp.Partners\JarvisCorp.Partners.csproj", "{B9E921C0-618D-4B65-A06E-EEAA4E9D81B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{6A3CD2FE-2597-477F-921B-98F2ED47B108}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A3CD2FE-2597-477F-921B-98F2ED47B108}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A3CD2FE-2597-477F-921B-98F2ED47B108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E921C0-618D-4B65-A06E-EEAA4E9D81B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E921C0-618D-4B65-A06E-EEAA4E9D81B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E921C0-618D-4B65-A06E-EEAA4E9D81B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E921C0-618D-4B65-A06E-EEAA4E9D81B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{BBA4BFB8-B90A-4356-B774-7A596B433B9B} = {4994C5AD-BAEE-47EC-8074-77F5075D2D56}
 		{C0206620-CEC5-467D-983A-BF3E8BB3DD8C} = {4994C5AD-BAEE-47EC-8074-77F5075D2D56}
 		{6A3CD2FE-2597-477F-921B-98F2ED47B108} = {4994C5AD-BAEE-47EC-8074-77F5075D2D56}
+		{B9E921C0-618D-4B65-A06E-EEAA4E9D81B6} = {4994C5AD-BAEE-47EC-8074-77F5075D2D56}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7EED4E3B-5576-4DEB-918A-2BAF0F9476DE}
