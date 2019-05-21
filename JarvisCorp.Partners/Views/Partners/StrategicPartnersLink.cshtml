@@ -1,0 +1,21 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+
+
+@foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
+{
+    <div class="square-container col-lg-3 col-md-6 col-sm-6 col-xs-12">
+        @{
+            Sitecore.Data.Fields.ImageField imgField = ((Sitecore.Data.Fields.ImageField)item.Fields["Image"]);
+            Sitecore.Data.Fields.Field imageheading = item.Fields["Images Alt"];
+            string imageUrl = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imgField.MediaItem);
+            <a class="square" href="@Sitecore.Links.LinkManager.GetItemUrl(item)">
+                <img src="@imageUrl" class="square-logo" alt="@imageheading">
+            </a>
+        }
+    </div>
+}

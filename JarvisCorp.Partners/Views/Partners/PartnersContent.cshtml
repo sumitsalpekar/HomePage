@@ -1,0 +1,17 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<section class="@Model.Rendering.Parameters["CssClass"]">
+    <div class="container">
+        <div class="row">
+            @Html.Sitecore().DynamicPlaceholder("partners-heading")
+        </div>
+
+        <div class="row square-wrapper">
+            @Html.Sitecore().DynamicPlaceholder("partners-content")
+        </div>
+    </div>
+</section>
