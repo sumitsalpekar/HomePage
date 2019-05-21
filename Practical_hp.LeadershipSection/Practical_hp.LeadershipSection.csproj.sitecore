@@ -1,0 +1,11 @@
+﻿<Project>
+  <PropertyGroup>
+    <Site Server="http://practical_hp.local" UserName="sitecore\admin" IsRemoteSitecore="False" />
+  </PropertyGroup>
+  <File Include="Views\AboutUs\Layouts\Mainlayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{9C0B6642-6469-4978-A34C-369FA3783E2A}</Item>
+  </File>
+  <File Include="/Views/AboutUs/Layouts/Mainlayout.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{9C0B6642-6469-4978-A34C-369FA3783E2A}</Item>
+  </File>
+</Project>
