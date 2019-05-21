@@ -1,0 +1,15 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<div class="grid-col quarter grid-second-col  fade-in js-fade-hide">
+    <a href=""> @*href="@Html.Sitecore().Field("Navigation Links")">*@
+        @Html.Sitecore().Field("Image", new { alt = "" })
+        <div class="grid-content">
+            <h5>@Html.Sitecore().Field("Title")</h5>
+            <p>@Html.Sitecore().Field("Navigation Title")</p>
+        </div>
+    </a>
+</div>

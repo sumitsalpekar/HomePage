@@ -1,0 +1,52 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Sitecore.Data.Fields.MultilistField overlayDetails = Model.Item.Fields["OverlayDetail"];
+    var overlays = overlayDetails.GetItems();
+}
+<section class="fifty overlay-list">
+    <div id="search-trigger-overlay"></div>
+    <!-- Overlays -->
+    @foreach (var item in overlays)
+    {
+        <div class="partners-overlay" id="@Html.Sitecore().Field("OverlayCode", item)">
+            <div class="overlay-content">
+                <span class="close">×</span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            @Html.Sitecore().Field("Image", item)
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <h3>@Html.Sitecore().Field("Content Heading", item)</h3>
+                            <p></p><p>
+                                @Html.Sitecore().Field("Content Intro", item)
+                            </p><p></p>
+                            <p>@Html.Sitecore().Field("Navigation Links", item)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="fiftyrow">
+        <div class="fiftycolumn mobile-hide">
+            @Html.Sitecore().Field("Image", new { @class = "fiftybg" })
+        </div>
+        <div class="fiftycolumn light-bg silver list">
+            <div class="fiftycontent">
+                <h1>@Html.Sitecore().Field("Content Heading")</h1>
+                <ul>
+                    @foreach (var item in overlays)
+                    {
+                        <li><a href="#@Html.Sitecore().Field("OverlayCode", item)">@Html.Sitecore().Field("Content Heading", item)</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-trigger-overlay"></div>
+</section>

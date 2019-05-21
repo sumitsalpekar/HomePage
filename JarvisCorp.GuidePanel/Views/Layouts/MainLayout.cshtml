@@ -1,0 +1,25 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html style="">
+<head>
+    <title>Perficient, Inc</title>
+    <link rel="stylesheet" href="/Css/bootstrap.css">
+    <link rel="stylesheet" href="/Css/perficient-main.css">
+    @Html.Sitecore().VisitorIdentification()
+    <script src="/Scripts/perficient.js"></script>
+</head>
+<body class="">
+    <section class="cta-grid grid-hero">
+        @Html.Sitecore().Placeholder("PHMain")
+        @*@Html.Sitecore().Placeholder("PHGuideContent")
+        @Html.Sitecore().Placeholder("PHMiddleGuideContent")
+        @Html.Sitecore().Placeholder("PHRightGuideContent")*@
+    </section>
+</body>
+</html>
