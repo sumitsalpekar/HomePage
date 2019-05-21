@@ -1,5 +1,0 @@
-﻿<Project>
-  <PropertyGroup>
-    <Site Server="http://practical_hp.local/" UserName="sitecore\admin" IsRemoteSitecore="False" />
-  </PropertyGroup>
-</Project>
