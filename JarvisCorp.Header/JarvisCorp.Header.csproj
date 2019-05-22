@@ -445,7 +445,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Views\Foundation\Header\header-BKP.cshtml" />
     <Content Include="Views\Foundation\Header\header.cshtml" />
     <Content Include="Views\Foundation\Header\headerMainMenu.cshtml" />
     <Content Include="Views\Foundation\Header\headerRightSideMenu.cshtml" />
