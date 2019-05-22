@@ -446,7 +446,6 @@
     <None Include="packages.config" />
     <Content Include="Web.config" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
-    <Content Include="Views\Features\Leadership\OneColumnLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
