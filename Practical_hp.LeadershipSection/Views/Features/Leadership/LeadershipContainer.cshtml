@@ -4,26 +4,28 @@
 @{
     var leaders = Model.Item.GetChildren();
 }
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 prft-heading">
-            <h1>@Html.Sitecore().Field("Meta Title")</h1>
+<section class="profile-overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 prft-heading">
+                <h1>@Html.Sitecore().Field("Meta Title")</h1>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (Sitecore.Data.Items.Item item in leaders)
+            {
+                Sitecore.Data.Fields.ImageField imageRef = item.Fields["Image"];
+                string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
+                string imgAltText = item.Fields["Images Alt"].Value;
+
+                <div class="profile-col profile-overlay-wrapper">
+                    <div class="profile-block">
+                        <img src="@imgSrc" class="img-responsive" alt="@imgAltText" />
+                        <h2>@item.Fields["Meta Title"]</h2>
+                        <h2>@item.Fields["Meta Description"]</h2>
+                    </div>
+                </div>
+            }
         </div>
     </div>
-    <div class="row">
-        @foreach (Sitecore.Data.Items.Item item in leaders)
-        {
-            Sitecore.Data.Fields.ImageField imageRef = item.Fields["Image"];
-            string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
-            string imgAltText = item.Fields["Images Alt"].Value;
-
-            <div class="profile-col profile-overlay-wrapper">
-                <div class="profile-block">
-                    <img src="@imgSrc" class="img-responsive" alt="@imgAltText" />
-                    <h2>@item.Fields["Meta Title"]</h2>
-                    <h2>@item.Fields["Meta Description"]</h2>
-                </div>
-            </div>
-        }
-    </div>
-</div>
+</section>
