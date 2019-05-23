@@ -472,13 +472,13 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Features\Tabs\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
+    <Content Include="Views\Features\Tabs\TabbedView.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
