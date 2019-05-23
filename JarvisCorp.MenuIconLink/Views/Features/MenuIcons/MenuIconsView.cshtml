@@ -3,6 +3,7 @@
     <div class="container">
         @foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
         {
+
         <a href="">
             <span><i>@Html.Sitecore().Field("Icon", item)</i></span>
             @Html.Sitecore().Field("Link", item)
