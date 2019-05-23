@@ -7,8 +7,11 @@
     <ul>
         @foreach (Sitecore.Data.Items.Item item in otheritems1)
         {
+            Sitecore.Data.Fields.LinkField linkField = item.Fields["Navigation Links"];
             <li>
-                <a href="#">@Html.Sitecore().Field("Navigation Title", item)</a>
+                <a href="@Sitecore.Links.LinkManager.GetItemUrl(linkField.TargetItem)">
+                    @Html.Sitecore().Field("Navigation Title", item)
+                </a>
             </li>
         }
     </ul>
