@@ -1,0 +1,9 @@
+﻿.jarvis-main-layout {
+    position: relative;
+    top: 87px;
+}
+.blankDiv {
+    display: block;
+    height: 35px;
+    background-color: transparent;
+}
