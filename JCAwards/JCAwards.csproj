@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1CF0036C-F95D-406D-9EA1-A6DCDACF30A9}</ProjectGuid>
+    <ProjectGuid>{08398F39-5F4E-4496-8383-8417F125C127}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Jarviscorp.Feedbacks</RootNamespace>
-    <AssemblyName>Jarviscorp.Feedbacks</AssemblyName>
+    <RootNamespace>JCAwards</RootNamespace>
+    <AssemblyName>JCAwards</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -444,8 +444,9 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Web.config" />
-    <Content Include="Views\Features\Feedback\EmployeeFeedback.cshtml" />
-    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
+    <Content Include="Views\Awards\Awards.cshtml" />
+    <Content Include="Views\Awards\Default_Awards.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -470,9 +471,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56904</DevelopmentServerPort>
+          <DevelopmentServerPort>55105</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56904/</IISUrl>
+          <IISUrl>http://localhost:55105/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

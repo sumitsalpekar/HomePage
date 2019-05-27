@@ -1,0 +1,22 @@
+﻿
+<h1>Awards</h1>
+<section class="award-cards author-image-0ebc19bd3e574d8ea430ce7f291e1388">
+        <div class="container">
+            <h1>Awards</h1>
+            <div class="row">
+@foreach(Sitecore.Data.Items.Item item in Model.Item.Children)
+{
+                    <article class="award-card">
+                        <h1 style="height: 172px;">
+                            @Html.Sitecore().Field("Content Heading", item)
+                            <br />
+                            <time><span>@Html.Sitecore().Field("Date",item,new {format = "MMMM dd, yyyy"})</span></time>
+                        </h1>
+                            <div class="award-card-content" style="height: 334px;">
+                                <p></p><p>@Html.Sitecore().Field("Content Intro",item)</p><p></p>
+                            </div>
+                    </article>
+} 
+ </div>
+        </div>
+    </section>

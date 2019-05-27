@@ -490,6 +490,7 @@
     <Content Include="Views\Layouts\OneColumn.cshtml" />
     <Content Include="Views\Layouts\ThreeColumn.cshtml" />
     <Content Include="Views\Layouts\TwoColumn.cshtml" />
+    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
