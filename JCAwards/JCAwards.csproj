@@ -447,6 +447,7 @@
     <Content Include="Views\Awards\Awards.cshtml" />
     <Content Include="Views\Awards\Default_Awards.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
