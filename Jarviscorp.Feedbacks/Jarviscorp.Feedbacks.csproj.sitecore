@@ -1,0 +1,8 @@
+﻿<Project>
+  <PropertyGroup>
+    <Site Server="http://practical_hp.local" UserName="sitecore\admin" IsRemoteSitecore="True" />
+  </PropertyGroup>
+  <File Include="Views\Features\Feedback\EmployeeFeedback.cshtml" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{98E34D3B-0CE0-4AA7-9510-E2F3CD02A323}</Item>
+  </File>
+</Project>
