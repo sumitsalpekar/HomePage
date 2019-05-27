@@ -441,28 +441,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Css\Features\_tiles.css" />
-    <Content Include="Css\bootstrap-grid.min.css" />
-    <Content Include="Css\bootstrap.css" />
-    <Content Include="Css\font-awesome.css" />
-    <Content Include="Css\perficient-main.css" />
-    <Content Include="Css\perficient-override.css" />
-    <Content Include="Css\style.css" />
-    <Content Include="Css\theme.css" />
-    <Content Include="Css\Features\_webinar.css" />
-    <Content Include="Scripts\perficient.js" />
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Layouts\MainLayout.cshtml" />
     <Content Include="Views\Features\Webinars\WebinarContent.cshtml" />
-    <Content Include="Views\Layouts\OneColumn.cshtml" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
-    <Content Include="Views\Layouts\TwoColumn.cshtml" />
-    <Content Include="Views\Layouts\ThreeColumn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
