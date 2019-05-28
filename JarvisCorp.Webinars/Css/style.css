@@ -1,1 +1,12 @@
-﻿
+﻿#our-values {
+    background: url('../Images/about-sm-bg.jpg') no-repeat center top;
+    background-size: cover;
+}
+
+@media screen and (min-width: 48em) {
+    #our-values {
+        background: url('../Images/about-dt-bg.jpg') no-repeat;
+        background-size: cover;
+    }
+}
+
