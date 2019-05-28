@@ -450,6 +450,8 @@
     <Content Include="Css\style.css" />
     <Content Include="Css\theme.css" />
     <Content Include="Css\Features\_webinar.css" />
+    <Content Include="Images\about-dt-bg.jpg" />
+    <Content Include="Images\about-sm-bg.jpg" />
     <Content Include="Scripts\perficient.js" />
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
@@ -462,7 +464,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
