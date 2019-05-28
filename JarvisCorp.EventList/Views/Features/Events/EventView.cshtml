@@ -1,0 +1,48 @@
+﻿<section class="cards-section silver static" id="cards-section-insights-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 section-header">
+                        <h2>EVENTS</h2>
+                        <aside>
+                            <a href="#" class="section-header-button">VIEW ALL EVENTS</a>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <div class="cards-container">
+                <div class="card-group">
+                    @foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
+                    {
+                        <article class="card col-lg-3 col-md-4 col-sm-12" style="display: block; height: 474px;">
+
+                            <a href="#">
+                                <div class="card-content">
+                                    <figure>
+                                        @Html.Sitecore().Field("Picture", item, new { @class = "img-responsive hidden-xs" })
+                                                       <!--<figcaption>Event</figcaption>-->
+                                    </figure>
+                                    <div class="card-block">
+                                        <h4 class="card-title"> @Html.Sitecore().Field("Title", item)</h4>
+                                        <p class="card-timestamp">
+                                            @Html.Sitecore().Field("Date", item)
+                                            <br>
+
+                                        </p>
+                                        <p class="card-location">
+                                            @Html.Sitecore().Field("Location", item)
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                    }
+                        
+                    </div>
+                <div class="container">
+                    <div class="button-wrapper">
+                        <a href="#" class="cardsbutton-style mobile-button">VIEW ALL EVENTS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
