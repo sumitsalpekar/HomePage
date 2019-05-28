@@ -29,27 +29,27 @@
             string imgAltText = card.Fields["Images Alt"].Value;
             Sitecore.Data.Fields.Field date = card.Fields["Date"];
 
-            <div class="col-sm-3">
+        <div class="col-sm-3">
+            <a href="@url" class="tile-card-link" id="tile-card-link">
                 <div class="tile-card">
-                    <a href="@url" class="tile-card-link" id="tile-card-link">
-                        <div class="card-container">
-                            <div class="image">
-                                <img src="@imgSrc" class="tileimg" alt="@imgAltText" />
-                            </div>
-                            <div class="heading">@Html.Sitecore().Field("Content Heading", card)</div>
+                    <div class="card-container">
+                        <div class="image">
+                            <img src="@imgSrc" class="tileimg" alt="@imgAltText" />
                         </div>
-                        <div class="intro-container">
-                            <div class="content">
-                                @Html.Sitecore().Field("Content Intro", card)
-                                @if (date.HasValue && date.Value != string.Empty && date.Value != null)
-                                {
-                                    <p class="dateclass">@Html.Sitecore().Field("Date", card, new { format = "MMM dd, yyyy" })</p>
-                                }
-                            </div>
+                        <div class="heading">@Html.Sitecore().Field("Content Heading", card)</div>
+                    </div>
+                    <div class="intro-container">
+                        <div class="content">
+                            @Html.Sitecore().Field("Content Intro", card)
+                            @if (date.HasValue && date.Value != string.Empty && date.Value != null)
+                            {
+                                <p class="dateclass">@Html.Sitecore().Field("Date", card, new { format = "MMM dd, yyyy" })</p>
+                            }
                         </div>
-                    </a>
+                    </div>
                 </div>
-            </div>
+            </a>
+        </div>
         }
     </div>
 </div>
