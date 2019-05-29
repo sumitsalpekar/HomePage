@@ -14,7 +14,9 @@
 .contact-form {
     margin-top: 80px;
 }
-
+#cards-section-webinars .card-content:hover .event-column .event-details {
+    background-color: #e6e4de;
+}
 @media screen and (min-width: 48em) {
     .author-image-0ebc19bd3e574d8ea430ce7f291e1388 {
         background: url(/images/awards-images-lg.jpg) no-repeat;
