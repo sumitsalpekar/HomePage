@@ -1,0 +1,25 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+
+}
+<section class="three-four-up" id="our-values">
+    <div class="container">
+        @if (Model.Item.Fields["Title"].Value != null && Model.Item.Fields["Title"].Value != String.Empty)
+        {
+            <div class="corp-header">
+                <h1>@Model.Item.Fields["Title"].Value</h1>
+            </div>
+        }
+
+        @foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
+        {
+            <article>
+                <i>@Html.Sitecore().Field("Image", item)</i>
+                <h2>@Html.Sitecore().Field("Content Heading", item)</h2>
+                <p>@Html.Sitecore().Field("Content Intro", item)</p>
+            </article>
+        }
+    </div>
+</section>
