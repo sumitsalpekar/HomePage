@@ -5,6 +5,8 @@
 
 }
 @{
+    /**/
+
     var cards = Model.Item.GetChildren();
     string navUrl = Sitecore.Links.LinkManager.GetItemUrl(Model.Item);
     Sitecore.Data.Fields.LinkField linkFieldVal = Model.Item.Fields["Navigation Links"];
@@ -25,17 +27,21 @@
         {
             string url = Sitecore.Links.LinkManager.GetItemUrl(card);
             Sitecore.Data.Fields.ImageField imageRef = card.Fields["Image"];
-            string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
-            string imgAltText = card.Fields["Images Alt"].Value;
             Sitecore.Data.Fields.Field date = card.Fields["Date"];
 
             <div class="col-sm-3">
                 <div class="tile-card">
                     <a href="@url" class="tile-card-link" id="tile-card-link">
                         <div class="card-container">
-                            <div class="image">
-                                <img src="@imgSrc" class="tileimg" alt="@imgAltText" />
-                            </div>
+
+                            @if (imageRef.MediaItem != null)
+                            {
+                                string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
+                                string imgAltText = card.Fields["Images Alt"].Value;
+                                <div class="image">
+                                    <img src="@imgSrc" class="tileimg" alt="@imgAltText" />
+                                </div>
+                            }
                             <div class="heading">@Html.Sitecore().Field("Content Heading", card)</div>
                         </div>
                         <div class="intro-container">
