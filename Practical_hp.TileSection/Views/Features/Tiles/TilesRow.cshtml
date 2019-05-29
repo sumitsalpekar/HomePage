@@ -1,4 +1,4 @@
-﻿@using Sitecore.Mvc
+@using Sitecore.Mvc
 @using Sitecore.Mvc.Presentation
 @model RenderingModel
 @functions{
@@ -24,9 +24,7 @@
         @foreach (Sitecore.Data.Items.Item card in cards)
         {
             string url = Sitecore.Links.LinkManager.GetItemUrl(card);
-            Sitecore.Data.Fields.ImageField imageRef = card.Fields["Image"];
-            string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
-            string imgAltText = card.Fields["Images Alt"].Value;
+            Sitecore.Data.Fields.ImageField imageRef = card.Fields["Image"];            
             Sitecore.Data.Fields.Field date = card.Fields["Date"];
 
         <div class="col-sm-3">
@@ -34,7 +32,14 @@
                 <div class="tile-card">
                     <div class="card-container">
                         <div class="image">
-                            <img src="@imgSrc" class="tileimg" alt="@imgAltText" />
+                            @if (imageRef.MediaItem != null)
+                            {
+                                string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
+                                string imgAltText = card.Fields["Images Alt"].Value;
+                                <div class="image">
+                                    <img src="@imgSrc" class="tileimg" alt="@imgAltText" />
+                                </div>
+                            }
                         </div>
                         <div class="heading">@Html.Sitecore().Field("Content Heading", card)</div>
                     </div>

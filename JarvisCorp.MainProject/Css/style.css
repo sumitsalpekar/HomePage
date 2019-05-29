@@ -24,3 +24,64 @@
     }
 }
 
+
+.desktop-footer {
+    font-family: "Open Sans", sans-serif;
+}
+
+.footer-share .dropdown-toggle button {
+    /*color: white;*/
+    /*border: 1px solid #8a8a8a !important;*/
+    background-color: transparent;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    padding: 0.8rem 3rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    display: inline-block;
+    letter-spacing: 1px;
+    /*margin-top: 10px;*/
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.footer-share a {
+    color: #8a8a8a;
+}
+
+.footer-share button:hover a {
+    color: white;
+}
+
+.footer-share a:hover {
+    color: white !important;
+    text-decoration: none;
+}
+
+.footer-slogan {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 1.65rem 5rem 1.65rem 5rem;
+    display: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: .03rem;
+    position: relative;
+}
+
+    .footer-slogan:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: -1rem;
+        border-top: 5.4rem solid #000;
+        border-right: 1rem solid transparent;
+    }
+
+
+.hero .hero-content a.btn-hero:focus {
+    text-decoration: none !important;
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
