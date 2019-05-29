@@ -450,6 +450,7 @@
     <Content Include="Views\Features\Partners\StrategicPartnersLink.cshtml" />
     <Content Include="Views\Features\Partners\EmergingPartnersLinks.cshtml" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
+    <Content Include="Views\Features\Partners\EnterprisePartners.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
