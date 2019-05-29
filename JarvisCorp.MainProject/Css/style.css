@@ -77,3 +77,9 @@
         border-right: 1rem solid transparent;
     }
 
+
+.hero .hero-content a.btn-hero:focus {
+    text-decoration: none !important;
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
