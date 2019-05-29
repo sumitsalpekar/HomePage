@@ -29,8 +29,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarvisCorp.Header", "Jarvis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarvisCorp.Webinars", "JarvisCorp.Webinars\JarvisCorp.Webinars.csproj", "{D49A2EC7-3212-44A0-8EB9-3BA7DAD7D97A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarvisCorp.TilesDescription", "JarvisCorp.TilesDescription\JarvisCorp.TilesDescription.csproj", "{30BC3888-B03F-4040-B949-EDCF2FD6BD10}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,10 +71,6 @@ Global
 		{D49A2EC7-3212-44A0-8EB9-3BA7DAD7D97A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D49A2EC7-3212-44A0-8EB9-3BA7DAD7D97A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D49A2EC7-3212-44A0-8EB9-3BA7DAD7D97A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{30BC3888-B03F-4040-B949-EDCF2FD6BD10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30BC3888-B03F-4040-B949-EDCF2FD6BD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30BC3888-B03F-4040-B949-EDCF2FD6BD10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30BC3888-B03F-4040-B949-EDCF2FD6BD10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,7 +85,6 @@ Global
 		{DE7EAAD3-9FD0-4476-A67F-58937BC48F14} = {4994C5AD-BAEE-47EC-8074-77F5075D2D56}
 		{7EE9AC65-78F3-4AEE-898E-E1EC147873EC} = {4994C5AD-BAEE-47EC-8074-77F5075D2D56}
 		{D49A2EC7-3212-44A0-8EB9-3BA7DAD7D97A} = {4994C5AD-BAEE-47EC-8074-77F5075D2D56}
-		{30BC3888-B03F-4040-B949-EDCF2FD6BD10} = {4994C5AD-BAEE-47EC-8074-77F5075D2D56}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45

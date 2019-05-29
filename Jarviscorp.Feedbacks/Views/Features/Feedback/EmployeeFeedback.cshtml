@@ -1,0 +1,43 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    var feedbacks = Model.Item.Children;
+    string url = Sitecore.Links.LinkManager.GetItemUrl(Model.Item);
+}
+<section class="testimonial-blocks">
+    <div class="row">
+        @foreach (Sitecore.Data.Items.Item feedback in feedbacks)
+        {
+            Sitecore.Data.Fields.ImageField imageRef = feedback.Fields["Image"];
+            string imgSrc = Sitecore.Resources.Media.MediaManager.GetMediaUrl(imageRef.MediaItem);
+            string imgAltText = feedback.Fields["Images Alt"].Value;
+        <div class="col-lg-4 col-md-6 testimonial">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="profile-picture">
+                            <img src="@imgSrc" alt="@imgAltText">
+                        </td>
+                        <td class="profile-role">
+
+                            <h3>@feedback.Fields["Meta Title"]</h3>
+                            <h3>@feedback.Fields["Meta Description"]</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="profile-testimonial" colspan="2">
+                            <p>
+                                @feedback.Fields["Content Intro"]
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        }
+    </div>
+    <div class="button-wrapper">
+        <a href="@url">@Model.Item.Fields["Navigation Title"]</a>
+    </div>
+</section>

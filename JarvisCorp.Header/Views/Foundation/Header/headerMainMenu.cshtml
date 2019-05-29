@@ -5,8 +5,9 @@
 
 @foreach (Sitecore.Data.Items.Item item in otheritems)
 {
+    Sitecore.Data.Fields.LinkField linkField = item.Fields["Navigation Links"];
     <li class="nav-item ">
-        <a href="#" class="nav-link dropdown-toggle" id="servicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="@Sitecore.Links.LinkManager.GetItemUrl(linkField.TargetItem)" class="nav-link" id="servicesMenu">
             @Html.Sitecore().Field("Navigation Title", item)
         </a>
     </li>

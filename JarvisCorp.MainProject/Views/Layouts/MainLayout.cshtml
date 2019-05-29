@@ -25,7 +25,9 @@
 </head>
 <body class="">
     @Html.Sitecore().Placeholder("header")
-    @Html.Sitecore().Placeholder("main")
+    <div class="jarvis-main-layout">
+        @Html.Sitecore().Placeholder("main")
+    </div>
     @Html.Sitecore().Placeholder("footer")
 </body>
 </html>
