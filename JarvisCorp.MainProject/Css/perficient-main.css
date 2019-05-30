@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /* Perficient Brand */
 /* greys swatches */
 /* one-off colors */
@@ -8558,7 +8558,7 @@ a.link-back {
 
 /* filters */
 .map {
-  background-image: url(../../assets/img/map-background.jpg);
+  background-image: url('../Images/map-background.jpg');
   background-size: cover;
   min-height: 600px;
   padding: 5.4rem 0; }
