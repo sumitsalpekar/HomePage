@@ -445,6 +445,7 @@
     <None Include="packages.config" />
     <Content Include="Views\Features\Webinars\WebinarContent.cshtml" />
     <None Include="Properties\PublishProfiles\JarvisCorp_OneClickPublish.pubxml" />
+    <Content Include="Views\Features\Webinars\UpcomingWebinars.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
