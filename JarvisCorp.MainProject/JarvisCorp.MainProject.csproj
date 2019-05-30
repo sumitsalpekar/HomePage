@@ -485,6 +485,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\about-dt-bg.jpg" />
     <Content Include="Images\about-sm-bg.jpg" />
+    <Content Include="Images\map-background.jpg" />
     <Content Include="Scripts\perficient.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Web.config" />

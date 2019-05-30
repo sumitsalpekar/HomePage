@@ -4,29 +4,31 @@
 @{
 
 }
-<div class="container">
-    <div class="row">
-        <div class="col-md-12"  style="color:white">
-            <h1>Our Locations</h1>
+<section class="map">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="color:white">
+                <h1>Our Locations</h1>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6" style="color:white">
-            @foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
-            {
-                <h3  style="color:white">@Html.Sitecore().Field("Country Name", item)</h3>
-                <ul class="list-unstyled">
-                    @if (item.HasChildren)
-                    {
-                        foreach (Sitecore.Data.Items.Item innerItem in item.Children)
+        <div class="row">
+            <div class="col-md-6" style="color:white">
+                @foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
+                {
+                    <h3 style="color:white">@Html.Sitecore().Field("Country Name", item)</h3>
+                    <ul class="list-unstyled">
+                        @if (item.HasChildren)
                         {
-                            <li>
-                                <a href="#"  style="color:white">@Html.Sitecore().Field("City Name", innerItem)</a>
-                            </li>
+                            foreach (Sitecore.Data.Items.Item innerItem in item.Children)
+                            {
+                                <li>
+                                    <a href="#" style="color:white">@Html.Sitecore().Field("City Name", innerItem)</a>
+                                </li>
+                            }
                         }
-                    }
-                </ul>
-            }
+                    </ul>
+                }
+            </div>
         </div>
     </div>
-</div>
+</section>
