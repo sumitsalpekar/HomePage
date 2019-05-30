@@ -4,30 +4,41 @@
 @{
 
 }
+@{
 
-<section class="cards-section white static expanded lower-eventpanels eventpanels" id="cards-section-webinars">
-    <div class="cards-container">
-        <div class="card-group">
-            @foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
-            {
-                <article class="card col-lg-3 col-md-4 col-sm-12">
+}
+
+
+@foreach (Sitecore.Data.Items.Item item in Model.Item.Children)
+{
+    <section class="cards-section white static expanded eventpanels" id="cards-section-webinars">
+        <div class="cards-container">
+            <div class="card-group">
+                <article class="card expanded col-sm-12">
                     <div class="card-content">
                         <div class="event-table">
-                            <div class="event-row">
+                            <div class="event-row row">
+                                <div class="event-column event-date-heading col-md-3">
+                                    <h1> @Html.Sitecore().Field("Date", item, new { format = "MMM dd" })</h1>
+                                </div>
                                 <div class="event-column event-details">
                                     <div class="event">
                                         <h4 class="event-title">
-                                            <a href="@Sitecore.Links.LinkManager.GetItemUrl(item)">
+                                            <a href="#">
                                                 @Html.Sitecore().Field("Webinar Title", item)
                                             </a>
                                         </h4>
                                         <h5></h5>
                                         <h6>
-                                            @Html.Sitecore().Field("Date", item, new { format = "MMM dd, yyyy" })
+                                            @Html.Sitecore().Field("Date", item, new { format = "MMM dd , yyyy" })
+                                            <br>
+                                            @Html.Sitecore().Field("Time Duration", item)
                                         </h6>
+                                        <a href="#"
+                                           class="btn-event">REGISTER</a>
                                     </div>
                                 </div>
-                                <div class="event-column event-host">
+                                <div class="event-column event-host col-md-4">
                                     @{
                                         Sitecore.Data.Fields.MultilistField refMultilistField = item.Fields["Webinar Speakers"];
                                         Sitecore.Data.Items.Item[] speakers = refMultilistField.GetItems();
@@ -35,7 +46,7 @@
                                         foreach (Sitecore.Data.Items.Item innerItem in speakers)
                                         {
                                             Sitecore.Data.Fields.ImageField imgField = ((Sitecore.Data.Fields.ImageField)innerItem.Fields["Photo"]);
-                                            Sitecore.Data.Fields.Field imageheading = Model.Item.Fields["Name"];
+                                             Sitecore.Data.Fields.Field imageheading = Model.Item.Fields["imageheading"]; 
                                             <div class="profile-label">
                                                 <div class="profile-row">
                                                     <div class="content-container img-wrapper">
@@ -60,7 +71,9 @@
                         </div>
                     </div>
                 </article>
-            }
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+}
+
+
